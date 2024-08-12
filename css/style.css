@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f1e1e;
+}
+
+.clock {
+    width: 20%;
+    height: 10rem;
+    padding: 1rem;
+    background-color: #1014185d;
+    color: #FFCE6D;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    animation: down 1s linear;
+    transition: all 1s ease-in-out;
+    cursor: context-menu;
+}
+
+.clock:hover {
+    transform: scale(1.2) perspective(1rem) rotateY(2deg);
+}
+
+@keyframes down {
+    from {
+        transform: translateY(-30rem);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
